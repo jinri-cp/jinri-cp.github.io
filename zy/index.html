@@ -27,8 +27,11 @@
   <div class="box">
     <h1>🎁 福利资源宝盒</h1>
     <p>点击按钮，随机探索一个宝藏福利资源！</p>
-	<h2>注意：复制提示中的“<font color="#FF0000">提取码</font>”！</h2>
-    <button id="openBtn" onclick="openBox()">开启惊喜</button>
+  <h2>注意：复制提示中的“<font color="#FF0000">提取码</font>”！</h2>
+    <button id="openBtn" onclick="openBox()"><font color="#FF0000">开启福利资源</font></button>
+    <p></p>
+    <p>浏览器设置：始终允许[网站]显示弹出式窗口和重定向</p>
+    <a href="https://www.bilibili.com/video/BV1Ae411m7G6/?vd_source=f72226d5c198aa699f4e43aed7c9bfab" title="拦截教程" target="_blank"><button>视频教程</button></a>
   </div>
 
   <script>
@@ -49,7 +52,7 @@
         const pick = prizes[Math.floor(Math.random() * prizes.length)];
         alert(`🎉 恭喜！你抽中了「${pick.name}」！即将前往...`);
         window.open(pick.url, '_blank');
-        btn.textContent = '再来一个！';
+        btn.textContent = '再来一个资源！';
         btn.disabled = false;
       }, 800);
     }
